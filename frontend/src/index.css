@@ -1,0 +1,299 @@
+:root {
+  --bg: #f4f5fa;
+  --card: #fff;
+  --tx: #1c2030;
+  --mu: #6b7285;
+  --bd: #e2e5ee;
+  --pr: #4f46e5;
+  --ok: #16a34a;
+  --wa: #d97706;
+  --er: #dc2626
+}
+
+* {
+  box-sizing: border-box
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--tx);
+  font: 15px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif
+}
+
+.wrap {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 20px
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 20px;
+  background: var(--card);
+  border-bottom: 1px solid var(--bd)
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 18px
+}
+
+.logo span {
+  color: var(--pr)
+}
+
+h2 {
+  margin: 0 0 6px
+}
+
+h3 {
+  margin: 0 0 10px
+}
+
+.mu {
+  color: var(--mu);
+  font-size: 13px
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--bd);
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 16px
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px
+}
+
+.stat {
+  background: var(--card);
+  border: 1px solid var(--bd);
+  border-radius: 12px;
+  padding: 14px
+}
+
+.stat b {
+  font-size: 26px;
+  display: block
+}
+
+.tabs {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 16px;
+  flex-wrap: wrap
+}
+
+.tabs button {
+  border: 1px solid var(--bd);
+  background: var(--card);
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font: inherit
+}
+
+.tabs button.on {
+  background: var(--pr);
+  color: #fff;
+  border-color: var(--pr)
+}
+
+.btn {
+  border: 1px solid var(--bd);
+  background: var(--card);
+  color: var(--tx);
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font: inherit
+}
+
+.btn.p {
+  background: var(--pr);
+  color: #fff;
+  border-color: var(--pr)
+}
+
+.btn.ok {
+  background: var(--ok);
+  color: #fff;
+  border-color: var(--ok)
+}
+
+.btn.er {
+  background: var(--er);
+  color: #fff;
+  border-color: var(--er)
+}
+
+.btn:disabled {
+  opacity: .5;
+  cursor: not-allowed
+}
+
+label {
+  display: block;
+  font-size: 13px;
+  color: var(--mu);
+  margin: 8px 0 3px
+}
+
+input,
+select {
+  width: 100%;
+  padding: 9px 10px;
+  border: 1px solid var(--bd);
+  border-radius: 8px;
+  font: inherit;
+  background: #fff
+}
+
+.tw {
+  overflow-x: auto
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse
+}
+
+th,
+td {
+  text-align: left;
+  padding: 10px 8px;
+  border-bottom: 1px solid var(--bd);
+  white-space: nowrap
+}
+
+th {
+  font-size: 12px;
+  color: var(--mu);
+  text-transform: uppercase
+}
+
+.bar {
+  height: 8px;
+  background: var(--bd);
+  border-radius: 5px;
+  overflow: hidden;
+  min-width: 100px
+}
+
+.bar i {
+  display: block;
+  height: 100%;
+  background: var(--pr)
+}
+
+.bar i.full {
+  background: var(--ok)
+}
+
+.tag {
+  display: inline-block;
+  padding: 2px 9px;
+  border-radius: 99px;
+  font-size: 12px;
+  background: #eef2ff;
+  color: var(--pr)
+}
+
+.tag.ok {
+  background: #dcfce7;
+  color: var(--ok)
+}
+
+.tag.wa {
+  background: #fef3c7;
+  color: var(--wa)
+}
+
+.tag.er {
+  background: #fee2e2;
+  color: var(--er)
+}
+
+.task {
+  padding: 12px 0;
+  border-bottom: 1px solid var(--bd);
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap
+}
+
+.task:last-child {
+  border-bottom: 0
+}
+
+.task .t {
+  flex: 1;
+  min-width: 200px
+}
+
+.err {
+  background: #fee2e2;
+  color: var(--er);
+  padding: 9px 12px;
+  border-radius: 8px;
+  margin: 10px 0
+}
+
+.okmsg {
+  background: #dcfce7;
+  color: var(--ok);
+  padding: 9px 12px;
+  border-radius: 8px;
+  margin: 10px 0
+}
+
+.chat {
+  height: 380px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 6px
+}
+
+.msg {
+  max-width: 80%;
+  padding: 9px 13px;
+  border-radius: 12px;
+  white-space: pre-wrap
+}
+
+.msg.user {
+  align-self: flex-end;
+  background: var(--pr);
+  color: #fff
+}
+
+.msg.bot {
+  align-self: flex-start;
+  background: #eef0f7
+}
+
+.row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-items: center
+}
+
+.chip {
+  border: 1px solid var(--bd);
+  background: var(--card);
+  border-radius: 99px;
+  padding: 5px 12px;
+  cursor: pointer;
+  font-size: 13px
+}
